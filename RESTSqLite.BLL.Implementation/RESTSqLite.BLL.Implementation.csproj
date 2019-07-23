@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RESTSqLite.BLL.Interface\RESTSqLite.BLL.Interface.csproj" />
+    <ProjectReference Include="..\RESTSqLite.DAL\RESTSqLite.DAL.csproj" />
+  </ItemGroup>
+
+</Project>
