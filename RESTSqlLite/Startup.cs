@@ -30,8 +30,11 @@ namespace RESTSqlLite
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            string connectionString = Configuration.GetConnectionString("PostsConnectionSqlite");
-            services.AddExternalServices(connectionString);
+            //string connectionString = Configuration.GetConnectionString("PostsConnectionSqlite");
+            string mssqlConnectionString = Configuration.GetConnectionString("MSSqlConnection");
+            string storageConnectionString = Configuration.GetConnectionString("StorageConnectionString");
+
+            services.AddExternalServices(mssqlConnectionString);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
